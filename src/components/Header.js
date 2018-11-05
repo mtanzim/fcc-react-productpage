@@ -6,10 +6,10 @@ const HeaderItems = ({id, content}) =>
 export default () =>
   <div className='header-div' id='header'>
     <div className='header-title'>
-      <img class='header-logo' alt='logo' id='header-img'>
+      <img src={require('../images/logo.PNG')} className='header-logo' alt='logo' id='header-img'>
       </img>
       <h1 id='' className='header-title-text'>
-        Title
+        Trapstar Games
       </h1>
     </div>
     <div className='header-components'>
