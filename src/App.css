@@ -1,48 +1,42 @@
+.header-container {
+  margin: 2%;
+  border: 2px solid black;
+}
+
+
 .header-div {
   display: flex;
   flex-wrap: nowrap;
-  height: 250px;
-  margin: 20px;
+  height: 100px;
+  /* margin: 20px; */
   justify-content: space-between;
-  background-color: grey;
+  background-color: rgb(128, 128, 128);
 }
 
 
 .header-title {
   display: flex;
-  flex-direction: column;
-  /* flex-grow: 2; */
-  flex-shrink: 1;
-  justify-content: flex-end;
-  align-items: flex-end;
-  /* justify-content: space-evenly; */
-  /* align-self: ; */
-  margin: 10px;
-  padding: 10px;
-  
-  
+  align-content: flex-start;
+  justify-content: space-evenly;
 }
 
-.header-components {
-  /* width: 350px; */
-  margin: 10px;
+.nav-components {
   display: flex;
-  flex-shrink: 5;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: flex-end;
   align-items: flex-end;
-  align-self: flex-end;
-  
+  background-color: aqua;
 }
 .header-title-text {
-  align-self: flex-end;
-  /* margin-left: 10px; */
+  align-self: center;
+  margin-left: 8px;
 }
 
 .header-logo {
-  align-self: flex-start;
-  height: 100px;
-  widows: 100px;
+  align-self: center;
+  height: 75px;
+  widows: 75px;
+  margin-left: 8px;
 }
 
 
@@ -51,16 +45,67 @@
   font-size: 1rem;
 }
 
-.card-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  margin: 40px;
-  /* background-color: aqua; */
+
+.body-container {
+  margin: 0% 10%;
 }
+
+.card-container {
+  margin: 10px 30px;
+}
+
+.card-rows {
+  display: grid;
+  grid-template-rows: auto;
+  grid-row-gap: 20px;
+  grid-column-gap: 20px;
+}
+
+.card-columns {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
 
 .card {
   border: 2px solid black;
-  height: 300px;
-  margin: 4px;
+  height: 150px;
+  /* margin: 50px 50px; */
 }
 
+.card-vert {
+  border: 2px solid black;
+  height: 500px;
+  /* margin: 50px 50px; */
+}
+
+.body-header-title {
+  background-color: azure;
+  border: 2px solid black;
+}
+
+.footer-container {
+  text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .card-columns {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+  }
+}
+
+/* @media only screen and (min-width: 768px) {
+  .card-rows {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+  }
+} */

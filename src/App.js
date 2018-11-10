@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import Header from './components/Header'
 import Cards from './components/Cards'
+import Footer from './components/Footer'
 import './App.css';
 
 class App extends Component {
@@ -9,21 +10,12 @@ class App extends Component {
     return (
       <div className="app-container">
         <Header/>
-        <Cards/>
-{/*         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header> */}
+        <div className='body-container'>
+          <Cards title='Features!' numCards={2} isVert={false}/>
+          <Cards title='How it Works' numCards={3} isVert={true}/>
+          <Cards title='Contact' numCards={1} isVert={false}/>
+        </div>
+        <Footer/>
       </div>
     );
   }

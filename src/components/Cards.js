@@ -1,22 +1,26 @@
 import React from 'react';
 
-const EachCard = ({id}) =>
-  <div className='card'>
+const EachCard = ({id, isVert}) =>
+
+
+  <div className={!isVert ? 'card' : 'card-vert'}>
     Card {id}
   </div>
 
 
-export default () => {
+export default ({ title, numCards, isVert = false}) => {
 
-  // let numCards = 5;
-  let cardsArr = Array(3).fill().map((e, i) => i + 1);
+  let cardsArr=[];
+  for (let i=0; i<numCards; i++) {
+    cardsArr.push(i);
+  }
 
   return (
     <div>
-      <h1>Cards here</h1>
-      <div className='card-container'>
+      <h1 className='body-header-title'>{title}</h1>
+      <div className={(!isVert ? `card-rows` : `card-columns`)+` card-container`}>
         {cardsArr.map(i =>
-          <EachCard id={i}/>
+          <EachCard key= {i} id={i} isVert={isVert}/>
         )}
         
       </div>
