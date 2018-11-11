@@ -1,26 +1,24 @@
 import React from 'react';
+import CardObj from "./Cards/CardArr";
 
-const EachCard = ({id, isVert}) =>
+const EachCard = ({id, isVert, content}) =>
 
 
   <div className={!isVert ? 'card' : 'card-vert'}>
-    Card {id}
+    {content}
   </div>
 
 
-export default ({ title, numCards, isVert = false}) => {
+export default ({ title, isVert}) => {
 
-  let cardsArr=[];
-  for (let i=0; i<numCards; i++) {
-    cardsArr.push(i);
-  }
+  let content = CardObj[title];
 
   return (
     <div>
       <h1 className='body-header-title'>{title}</h1>
       <div className={(!isVert ? `card-rows` : `card-columns`)+` card-container`}>
-        {cardsArr.map(i =>
-          <EachCard key= {i} id={i} isVert={isVert}/>
+        {content.map( (item, i) =>
+          <EachCard key={i} id={i} isVert={isVert} content={item}/>
         )}
         
       </div>

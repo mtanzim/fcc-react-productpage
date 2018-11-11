@@ -1,6 +1,6 @@
 .header-container {
   margin: 2%;
-  border: 2px solid black;
+  border-bottom: 2px solid#fb8c00;
 }
 
 
@@ -10,7 +10,7 @@
   height: 100px;
   /* margin: 20px; */
   justify-content: space-between;
-  background-color: rgb(128, 128, 128);
+  background-color: white;
 }
 
 
@@ -25,7 +25,7 @@
   flex-wrap: wrap;
   justify-content: flex-end;
   align-items: flex-end;
-  background-color: aqua;
+  /* background-color:#fb8c00; */
 }
 .header-title-text {
   align-self: center;
@@ -37,6 +37,7 @@
   height: 75px;
   widows: 75px;
   margin-left: 8px;
+  border: 2px solid #fb8c00
 }
 
 
@@ -48,6 +49,39 @@
 
 .body-container {
   margin: 0% 10%;
+}
+
+.form-container {
+  /* display: flex; */
+  /* flex-direction: column; */
+  margin: 10px 30px;
+}
+
+.form-title {
+  border-bottom: 2px solid#fb8c00;
+
+}
+
+.form-input-container {
+  display: flex;
+  flex-direction: row;
+  /* flex-wrap: wrap; */
+  justify-content: center;
+}
+
+.app-form {
+  width: 300px;
+  border: 1px solid #fb8c00;
+}
+.app-form-button {
+  margin-left: 4px;
+  width: 80px;
+  background-color:white;
+  border: 1px solid #fb8c00;
+}
+
+.app-form-button:hover {
+  background-color: #fb8c00;
 }
 
 .card-container {
@@ -70,25 +104,59 @@
 }
 
 
+
 .card {
-  border: 2px solid black;
-  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  /* border: 2px solid black; */
+  height: 80px;
+  padding: 8px;
   /* margin: 50px 50px; */
+}
+
+.card:hover {
+  /* translate: 8px 0px; */
+  /* border-bottom: 2px solid #fb8c00; */
+  background-color: #fb8c00;
 }
 
 .card-vert {
-  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid black;
   height: 500px;
+  /* background-color:#fb8c00; */
+  border: 8px solid #fb8c00;
   /* margin: 50px 50px; */
+  padding: 8px;
+}
+
+.card-vert:hover {
+  background-color: #fb8c00;
 }
 
 .body-header-title {
-  background-color: azure;
-  border: 2px solid black;
+  border-bottom: 2px solid#fb8c00;
 }
 
 .footer-container {
+  /* margin: 2%; */
+  border-top: 2px solid#fb8c00;
+  margin: 200px 2% 0px 2%;
   text-align: center;
+}
+
+.footer-icon {
+  font-size: 24px;
+  margin: 12px 8px;
+}
+
+.game-logo {
+  font-size: 68px;
 }
 
 @media only screen and (max-width: 768px) {
