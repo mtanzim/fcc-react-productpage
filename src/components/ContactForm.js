@@ -30,9 +30,9 @@ export default class ContactForm extends React.Component {
 
   render() {
     return (
-      <div className='form-container'>
+      <div className='form-container' ref={this.props.reactRef}>
         <form name="formA" id="form" action="true">
-          <h1 className='body-header-title'>Join the Mailing List!</h1>
+          <h2 className='body-header-title'>{this.props.title}</h2>
           <div className="form-input-container">
             <input id="email" name="email" type="email" value={this.state.text} className='app-form' placeholder="rockstar@trapper.com" onChange={this.handleChange}>
             </input>

@@ -35,15 +35,6 @@ const gameCards = [
   )
 ]
 
-const demoCard = [
-  (
-    <div>
-      <p>Video of Blue Retribution</p>
-      <p>Video here</p>
-    </div>
-
-  ),
-]
 
 
 
@@ -52,5 +43,5 @@ const demoCard = [
 export default {
   "Features!": featureCards,
   "Games" : gameCards,
-  "Demonstration": demoCard,
+  // "Demonstration": demoCard,
 }

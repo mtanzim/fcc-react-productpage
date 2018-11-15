@@ -1,33 +1,17 @@
 import React from 'react';
+import image from '../images/logo.PNG'
+
 
 const HeaderItems = ({ id, content, reactRef, clickScroll}) =>
-  <a className='header-item nav-link' href={`#${id}`} onClick={(event) => clickScroll(event, reactRef)}><h2 id={id}>{content}</h2></a>
+  <a className='nav-link' href={`#${id}`} onClick={(event) => clickScroll(event, reactRef)}><p id={id}>{content}</p></a>
 
-export default ({sections, clickScroll, reactRef}) => {
-
-/*   function navClickToScroll (e, refElem) {
-    e.preventDefault();
-    clickScroll(refElem);
-  } */
-  
-  return (
-    <div id='header' className='header-container'>
-      <nav id="nav-bar" className='nav-components'>
-        {sections.map((item, index) =>
-          <HeaderItems key={index} id={index} content={item} clickScroll={clickScroll} reactRef={reactRef[index]} />
-        )}
-      </nav>
-      <div className='header-div' >
-        <div className='header-title'>
-          <img src={require('../images/logo.PNG')} className='header-logo' alt='logo' id='header-img'>
-          </img>
-          <h1 id='' className='header-title-text'>
-            Trapstar Games
-          </h1>
-        </div>
-      </div>
-
-    </div>
-  )
-
-}
+export default ({sections, clickScroll, reactRef}) =>
+  <div id='header'>
+    <nav id="nav-bar" className='nav-components sticky'>
+      <img src={image} className='header-logo' alt='logo' id='header-img'>
+      </img>
+      {sections.map((item, index) =>
+        <HeaderItems key={index} id={index} content={item} clickScroll={clickScroll} reactRef={reactRef[index]} />
+      )}
+    </nav>
+  </div>;
