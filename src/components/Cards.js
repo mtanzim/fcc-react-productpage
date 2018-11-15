@@ -6,15 +6,15 @@ const EachCard = ({id, isVert, content}) =>
 
   <div className={!isVert ? 'card' : 'card-vert'}>
     {content}
-  </div>
+  </div>;
 
 
-export default ({ title, isVert}) => {
+export default ({ title, isVert, reactRef}) => {
 
   let content = CardObj[title];
 
   return (
-    <div>
+    <div ref={reactRef}>
       <h1 className='body-header-title'>{title}</h1>
       <div className={(!isVert ? `card-rows` : `card-columns`)+` card-container`}>
         {content.map( (item, i) =>
@@ -23,5 +23,5 @@ export default ({ title, isVert}) => {
         
       </div>
     </div>
-  )
-}
+  );
+};
